@@ -44,7 +44,10 @@ namespace ClassMetier
             //Deptno = deptno;
         }
 
-        //Todo ToString
+        public override string ToString()
+        {
+            return $" {Empno} {Ename} {Job} {Sal}";
+        }
 
 
     }
