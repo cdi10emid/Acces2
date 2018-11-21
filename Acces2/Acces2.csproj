@@ -49,5 +49,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassDAO\ClassDAO.csproj">
+      <Project>{479648BB-4161-41DF-A48E-CCD9C1E4EABD}</Project>
+      <Name>ClassDAO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

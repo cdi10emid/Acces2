@@ -1,16 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using ClassDAO;
+using System.Data;
+using System;
 
-namespace Acces2
+namespace AccesSql
 {
-    class Program
+    public class Program
     {
         static void Main(string[] args)
         {
-            
+            AccesEmp DataEmp = new AccesEmp();
+            DataTable objDatatable = DataEmp.GetEmpByDeptno(10);
+
+            //Console.WriteLine(objDataset.GetXml());
+
+            foreach (DataRow ligne in objDatatable.Rows)
+            {
+                Console.WriteLine(ligne[0].ToString());
+            }
+
+
+            Console.ReadKey();
         }
     }
 }

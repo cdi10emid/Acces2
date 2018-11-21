@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ClassBusness
 {
-    public class Class1
+    public class ClassDaoBus
     {
     }
 }
