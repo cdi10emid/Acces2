@@ -39,8 +39,10 @@ namespace ClassDAO
             {
                 Departement Dept = new Departement();
 
-                ListeDept.Add( Dept);
+
+                Dept.Deptno = Convert.ToInt32(dept["DEPTNO"]);
                 Dept.Dname = dept["DNAME"].ToString();
+                ListeDept.Add(Dept);
 
             }
             return ListeDept;

@@ -19,7 +19,11 @@ namespace ClassBusness
         public List<Departement> Dept(){
             return new ClassDept().listeDept();
         }
-      
+      public List<Employe> Emp(int Deptno)
+        {
+            
+            return new AccesEmp().liste_emp( Deptno);
+        }
 
         
     }

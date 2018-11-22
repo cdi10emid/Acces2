@@ -25,14 +25,26 @@ namespace WindowsFormsApp1
         {
             ClassDaoBus ListDept = new ClassDaoBus();
             this.comboBox1.DataSource = ListDept.Dept();
-            comboBox1.DisplayMember =  ListDept.Dept().ToString();
+            comboBox1.DisplayMember =  "Dname";
+            comboBox1.ValueMember = "Deptno";
+
+            //ClassDaoBus ListEmp = new ClassDaoBus();
+            //this.dataGridView1.DataSource = ListEmp.
 
         }
         
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (comboBox1.SelectedValue is int && comboBox1.SelectedValue != null)
+            {
+                int Depno = (int)comboBox1.SelectedValue;
+                ClassDaoBus ListDept = new ClassDaoBus();
+                bindingSource1.DataSource = ListDept.Emp(Depno);
+                dataGridView1.DataSource = bindingSource1;
 
-         
+            }
+
+
         }
 
        

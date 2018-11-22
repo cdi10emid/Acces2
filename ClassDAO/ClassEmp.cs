@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using System.Configuration;
 using System.Data;
 using System.Runtime.Remoting.Messaging;
+using ClassMetier;
 
 namespace ClassDAO
 {
@@ -59,7 +60,7 @@ namespace ClassDAO
             objDataAdapter.Fill(objDataset, "EMP");
             return objDataset.Tables["EMP"];
         }
-        public DataTable liste_emp(int deptNo)
+        public List<Employe> liste_emp(int deptNo)
         {
             SqlConnection cn = new SqlConnection();
             cn.ConnectionString = ConfigurationManager.ConnectionStrings["SQL"].ConnectionString;
@@ -70,11 +71,20 @@ namespace ClassDAO
             objSelect.CommandType = CommandType.StoredProcedure;
             objSelect.Parameters.AddWithValue("@depno", deptNo);
 
+            List<Employe> ListEmp = new List<Employe>();
 
-            DataSet objDataset = new DataSet();
+            DataTable objDataset = new DataTable();
             SqlDataAdapter objDataAdapter = new SqlDataAdapter(objSelect);
-            objDataAdapter.Fill(objDataset, "EMP");
-            return objDataset.Tables["EMP"];
+            objDataAdapter.Fill(objDataset);
+            foreach (DataRow emp in objDataset.Rows)
+            {
+                Employe Emp = new Employe();
+
+                ListEmp.Add(Emp);
+                Emp.Ename = emp["ENAME"].ToString();
+
+            }
+            return ListEmp;
         }
 
     }
