@@ -1,4 +1,5 @@
 ﻿using ClassDAO;
+using ClassMetier;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -10,10 +11,16 @@ namespace ClassBusness
 {
     public class ClassDaoBus
     {
-       // public DataTable objDatatable { get; set; }
+        public ClassDaoBus()
+        {
 
-        ClassDept DataEmp = new ClassDept();
-       DataTable objDatatable = new DataTable();
-        objDatatable
+        }
+
+        public List<Departement> Dept(){
+            return new ClassDept().listeDept();
+        }
+      
+
+        
     }
 }

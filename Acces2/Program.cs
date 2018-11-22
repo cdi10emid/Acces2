@@ -9,15 +9,15 @@ namespace AccesSql
         static void Main(string[] args)
         {
             ClassDept DataEmp = new ClassDept();
-            DataTable objDatatable = DataEmp.listeDept();
+           
 
             //Console.WriteLine(objDataset.GetXml());
 
-            foreach (DataRow ligne in objDatatable.Rows)
-            {
-                Console.WriteLine(ligne[0].ToString());
+            //foreach (DataRow ligne in objDatatable.Rows)
+            //{
+            //    Console.WriteLine(ligne[0].ToString());
                 
-            }
+            //}
 
 
             Console.ReadKey();

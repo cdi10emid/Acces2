@@ -79,5 +79,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassBusness\ClassBusness.csproj">
+      <Project>{75566ff0-cbc8-4bcc-b597-4dcc5301cc24}</Project>
+      <Name>ClassBusness</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassMetier\ClassMetier.csproj">
+      <Project>{17FE9682-F4A2-4906-9345-9A23CD271D32}</Project>
+      <Name>ClassMetier</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

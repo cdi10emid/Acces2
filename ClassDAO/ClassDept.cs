@@ -16,6 +16,7 @@ namespace ClassDAO
         {
 
         }
+        
         public List<Departement> listeDept()
         {
             SqlConnection cn = new SqlConnection();
@@ -26,17 +27,20 @@ namespace ClassDAO
             objSelect.CommandText = "dbo.listeDept";
             objSelect.CommandType = CommandType.StoredProcedure;
 
-            Departement Dept = new Departement();
+            
             List<Departement> ListeDept = new List<Departement>();
             
             DataTable objDataset = new DataTable();
             SqlDataAdapter objDataAdapter = new SqlDataAdapter(objSelect);
+           
             objDataAdapter.Fill(objDataset);
+           
             foreach (DataRow dept in objDataset.Rows)
             {
-                
-               // Dept.Dname = ligne["DNAME"].ToString();
+                Departement Dept = new Departement();
+
                 ListeDept.Add( Dept);
+                Dept.Dname = dept["DNAME"].ToString();
 
             }
             return ListeDept;
