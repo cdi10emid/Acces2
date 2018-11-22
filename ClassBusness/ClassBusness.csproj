@@ -44,5 +44,15 @@
     <Compile Include="ClassDaoBus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassDAO\ClassDAO.csproj">
+      <Project>{479648bb-4161-41df-a48e-ccd9c1e4eabd}</Project>
+      <Name>ClassDAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ClassMetier\ClassMetier.csproj">
+      <Project>{17fe9682-f4a2-4906-9345-9a23cd271d32}</Project>
+      <Name>ClassMetier</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

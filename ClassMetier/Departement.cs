@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace ClassMetier
 {
-    class Departement
+   public class Departement
     {
-        public int Deptno { get; set; }
-        public string Dname { get; set; }
-        public string Loc { get; set; }
+        private int Deptno { get; set; }
+        private string Dname { get; set; }
+        private string Loc { get; set; }
         public Departement()
         {
 

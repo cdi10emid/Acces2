@@ -59,6 +59,23 @@ namespace ClassDAO
             objDataAdapter.Fill(objDataset, "EMP");
             return objDataset.Tables["EMP"];
         }
+        public DataTable liste_emp(int deptNo)
+        {
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = ConfigurationManager.ConnectionStrings["SQL"].ConnectionString;
+
+            SqlCommand objSelect = new SqlCommand();
+            objSelect.Connection = cn;
+            objSelect.CommandText = "dbo.liste_emp";
+            objSelect.CommandType = CommandType.StoredProcedure;
+            objSelect.Parameters.AddWithValue("@depno", deptNo);
+
+
+            DataSet objDataset = new DataSet();
+            SqlDataAdapter objDataAdapter = new SqlDataAdapter(objSelect);
+            objDataAdapter.Fill(objDataset, "EMP");
+            return objDataset.Tables["EMP"];
+        }
 
     }
 }

@@ -8,14 +8,15 @@ namespace AccesSql
     {
         static void Main(string[] args)
         {
-            AccesEmp DataEmp = new AccesEmp();
-            DataTable objDatatable = DataEmp.GetEmpByDeptno(10);
+            ClassDept DataEmp = new ClassDept();
+            DataTable objDatatable = DataEmp.listeDept();
 
             //Console.WriteLine(objDataset.GetXml());
 
             foreach (DataRow ligne in objDatatable.Rows)
             {
                 Console.WriteLine(ligne[0].ToString());
+                
             }
 
 
