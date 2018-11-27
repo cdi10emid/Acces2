@@ -23,8 +23,14 @@ namespace ClassBusness
         {
             
             return new AccesEmp().liste_emp( Deptno);
+        } public List<Employe> AllEmp()
+        {
+            return new AccesEmp().listeAllEmp();
         }
+        //public int Update(Employe employe)
+        //{
+        //   // return  ClassEmp.Update(employe);
+        //}
 
-        
     }
 }

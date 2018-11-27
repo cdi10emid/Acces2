@@ -9,14 +9,18 @@ using System.Configuration;
 using System.Data;
 using System.Runtime.Remoting.Messaging;
 using ClassMetier;
+using DAL;
 
 namespace ClassDAO
 {
     public class AccesEmp
     {
+       
+        private SqlDAO objSqlDAO;
+
         public AccesEmp()
         {
-
+            objSqlDAO = SqlDAO.GetInstance();
         }
         public int GetNbEmp(int deptNo)
         {
@@ -82,9 +86,49 @@ namespace ClassDAO
 
                 ListEmp.Add(Emp);
                 Emp.Ename = emp["ENAME"].ToString();
+                Emp.Sal = Convert.ToInt32( emp["SAL"]);
+                Emp.Job = emp["JOB"].ToString();
 
             }
             return ListEmp;
+        }
+        public List<Employe> listeAllEmp()
+        {
+            SqlConnection cn = new SqlConnection();
+            cn.ConnectionString = ConfigurationManager.ConnectionStrings["SQL"].ConnectionString;
+
+            SqlCommand objSelect = new SqlCommand();
+            objSelect.Connection = cn;
+            objSelect.CommandText = "dbo.listeAllEmp";
+            objSelect.CommandType = CommandType.StoredProcedure;
+            
+
+            List<Employe> ListAllEmp = new List<Employe>();
+
+            DataTable objDataset = new DataTable();
+            SqlDataAdapter objDataAdapter = new SqlDataAdapter(objSelect);
+            objDataAdapter.Fill(objDataset);
+            foreach (DataRow emp in objDataset.Rows)
+            {
+                Employe Emp = new Employe();
+
+                ListAllEmp.Add(Emp);
+                Emp.Ename = emp["ENAME"].ToString();
+                Emp.Sal = Convert.ToInt32(emp["SAL"]);
+                Emp.Job = emp["JOB"].ToString();
+
+            }
+            return ListAllEmp;
+        }
+        public int Update(Employe employe)
+        {
+            SqlCommand objUpdateCommand = new SqlCommand();
+            objUpdateCommand.CommandText = "dbo.UpdateEmp";
+            objUpdateCommand.CommandType = CommandType.StoredProcedure;
+            objUpdateCommand.Parameters.AddWithValue("@empno", employe.Empno);
+            objUpdateCommand.Parameters.AddWithValue("@ename", employe.Ename);
+
+            return objSqlDAO.ExecuteNonQuery(objUpdateCommand);
         }
 
     }

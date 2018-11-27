@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<HelpTOC>
+
+  <HelpTOCNode Title="Welcome to the [TODO: Add project name]" Url="html/ebc12060-8a65-4aa9-b9c5-73cb4c954237.htm" />
+  <HelpTOCNode Id="74445f57-54e2-43ee-8532-4672491f3a55" Title="Version History" Url="html/2231200b-2fa3-4761-91b4-90774e856dd2.htm">
+    <HelpTOCNode Title="Version 1.0.0.0" Url="html/d770c254-2b88-4336-a7d3-8ed01d8070a3.htm" />
+  </HelpTOCNode>
+  <HelpTOCNode Id="b3ceea64-4ed8-4289-8f22-6fb3bbaf27f0" Title="ClassDAO" Url="html/73eae064-1f79-d511-b532-dd4ae8439168.htm">
+    <HelpTOCNode Id="b5c1cc79-7795-44b2-8961-71d2576b3f66" Title="AccesEmp Classe" Url="html/49c2ceb1-09a7-e307-9150-e4e207b2538d.htm">
+      <HelpTOCNode Title="AccesEmp Constructeur " Url="html/50112b26-6d94-ec75-00bf-95f1b3247b97.htm" />
+      <HelpTOCNode Id="988b44c9-211d-46c9-a399-58fbc32be658" Title="AccesEmp M&#233;thodes" Url="html/02f92248-04f7-8c54-52c2-b487676b0a62.htm">
+        <HelpTOCNode Title="GetEmpByDeptno M&#233;thode " Url="html/f1be90a0-f095-3011-8786-778a7bdabfe8.htm" />
+        <HelpTOCNode Title="GetNbEmp M&#233;thode " Url="html/76ae32f0-d791-befb-88f5-503b38afb070.htm" />
+        <HelpTOCNode Title="liste_emp M&#233;thode " Url="html/1e8136c0-617e-7feb-991e-ee91f2384195.htm" />
+        <HelpTOCNode Title="listeAllEmp M&#233;thode " Url="html/beb5d508-ef3d-0e23-a476-dd9c0caa405b.htm" />
+        <HelpTOCNode Title="Update M&#233;thode " Url="html/6fafe50d-4b52-45f7-9b27-d2e362060508.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+    <HelpTOCNode Id="ddd2ca0b-28ad-4b37-88dc-debd7b622595" Title="ClassDept Classe" Url="html/1ce56c48-c10b-619f-2b2d-98d774cd8041.htm">
+      <HelpTOCNode Title="ClassDept Constructeur " Url="html/c06ff610-6f18-3d21-2e58-87fe9ec9c5a0.htm" />
+      <HelpTOCNode Id="abcf9e06-b561-44cd-a1f8-482e0f91b0e1" Title="ClassDept M&#233;thodes" Url="html/33e6b721-2fb9-e571-bfed-396805f7688c.htm">
+        <HelpTOCNode Title="listeDept M&#233;thode " Url="html/056a022a-7a4c-b7dd-4a38-0ab4d2c281b2.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+  <HelpTOCNode Id="21b22784-55a1-4bb4-992e-9be3c0dae6f0" Title="DAL" Url="html/6334a317-1d3e-dab1-9f4e-1c868d3f6675.htm">
+    <HelpTOCNode Id="898a44cb-b415-4211-9795-62527d7f523a" Title="SqlDAO Classe" Url="html/00104d8f-bcba-cfd1-a226-c7d3e11631ef.htm">
+      <HelpTOCNode Id="b4e5d4b8-b6a6-4540-ba8d-59ab38325983" Title="SqlDAO M&#233;thodes" Url="html/50cd4fae-6f8c-723b-951c-171845d4430f.htm">
+        <HelpTOCNode Title="Close M&#233;thode " Url="html/03081e53-a5d7-4123-6752-5046199e6a3f.htm" />
+        <HelpTOCNode Id="42dc5226-8e63-4d12-8dd8-79fa0160d0ec" Title="ExecuteDataSet M&#233;thode " Url="html/4028ab07-d087-ed2e-edb7-2303be4bd2a7.htm">
+          <HelpTOCNode Title="ExecuteDataSet M&#233;thode (SqlCommand)" Url="html/a51c0743-f310-8213-a193-a3dea7b7d198.htm" />
+          <HelpTOCNode Title="ExecuteDataSet M&#233;thode (String)" Url="html/4c9db4ae-eecb-0845-a463-b9c96298b9be.htm" />
+        </HelpTOCNode>
+        <HelpTOCNode Title="ExecuteNonQuery M&#233;thode " Url="html/5b9ad049-b9e3-7a7b-862b-b779dc40a658.htm" />
+        <HelpTOCNode Title="GetInstance M&#233;thode " Url="html/7b7fbed1-a992-0dbd-24f6-9dcc3e6b9abe.htm" />
+      </HelpTOCNode>
+    </HelpTOCNode>
+  </HelpTOCNode>
+</HelpTOC>
